@@ -1,31 +1,30 @@
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
 typedef struct bagli_liste
 {
     // bagli liste icin us ve coefficient bilgilerini iceren struct yapisi olusturulur.
-    //2 adet deðiþken tanýmlanýr
+    //2 adet deÃ°iÃ¾ken tanÃ½mlanÃ½r
     int Upper;
     int Coefficient;
     //bagli listenin bellekteki next yeri belirtiliyor.
     struct bagli_liste* next;
 }BLISTE;
-//biste altýndaki deðiþkenler, deðerleri ve yeni pointerlar eklendi.
+//biste altÃ½ndaki deÃ°iÃ¾kenler, deÃ°erleri ve yeni pointerlar eklendi.
 BLISTE* ilk = NULL, * ilk2 = NULL, * ilk3 = NULL,
 * son = NULL, * son2 = NULL, * son3 = NULL,
 * yeni, * yeni2, * yeni3, * pol1, * pol2, * pol3, * pol4;
 
 BLISTE ekle(BLISTE* yeni) // 1.polinom icin ekleme fonksiyonu
 {                         // 2 polinom farkli bagli listede tutulmaktadir.
-    if (ilk != NULL) {       //eðer ilk deðer null eþit deðil ise;
+    if (ilk != NULL) {       //eÃ°er ilk deÃ°er null eÃ¾it deÃ°il ise;
         printf(ilk);
-        son->next = yeni;   // son deðiþkeninin next i yeniye eþitleniyor.
+        son->next = yeni;   // son deÃ°iÃ¾keninin next i yeniye eÃ¾itleniyor.
         son = yeni;
-        son->next = NULL;   //sonun next i null a eþitleniyor
+        son->next = NULL;   //sonun next i null a eÃ¾itleniyor
     }
-    else {                //deðiþken null ise
-        ilk = yeni;         // ilk yeni ye eþitlenip son da ilk e eþitleniyor
+    else {                //deÃ°iÃ¾ken null ise
+        ilk = yeni;         // ilk yeni ye eÃ¾itlenip son da ilk e eÃ¾itleniyor
         son = ilk;
         ilk->next = NULL;
     }
@@ -161,7 +160,6 @@ int main() {
             if (pol2 != NULL)
                 printf("+");
         }
-
     }
     pol1 = ilk;  // 1. 2. 3. polinomlarin tutuldugu bagli listelerdeki ilk dugumler p p2 ve p3 e atandi
     pol2 = ilk2;
@@ -193,5 +191,4 @@ int main() {
     }
     pol3 = ilk3;
     yazdir(pol1);
-    getch();
 }
