@@ -4,27 +4,26 @@
 typedef struct bagli_liste
 {
     // bagli liste icin us ve coefficient bilgilerini iceren struct yapisi olusturulur.
-    //2 adet deðiþken tanýmlanýr
+    //2 adet degisken tanımlanıyor
     int Upper;
     int Coefficient;
     //bagli listenin bellekteki next yeri belirtiliyor.
     struct bagli_liste* next;
 }BLISTE;
-//biste altýndaki deðiþkenler, deðerleri ve yeni pointerlar eklendi.
 BLISTE* ilk = NULL, * ilk2 = NULL, * ilk3 = NULL,
 * son = NULL, * son2 = NULL, * son3 = NULL,
 * yeni, * yeni2, * yeni3, * pol1, * pol2, * pol3, * pol4;
 
 BLISTE ekle(BLISTE* yeni) // 1.polinom icin ekleme fonksiyonu
 {                         // 2 polinom farkli bagli listede tutulmaktadir.
-    if (ilk != NULL) {       //eðer ilk deðer null eþit deðil ise;
+    if (ilk != NULL) {       
         printf(ilk);
-        son->next = yeni;   // son deðiþkeninin next i yeniye eþitleniyor.
+        son->next = yeni;   // son degiskenin next i yeniye esitleniyor.
         son = yeni;
-        son->next = NULL;   //sonun next i null a eþitleniyor
+        son->next = NULL;   //sonun next i null a esitleniyor
     }
-    else {                //deðiþken null ise
-        ilk = yeni;         // ilk yeni ye eþitlenip son da ilk e eþitleniyor
+    else {                //degiþken null ise
+        ilk = yeni;         // ilk yeni ye esitlenip son da ilk e esitleniyor
         son = ilk;
         ilk->next = NULL;
     }
